@@ -1,0 +1,13 @@
+The following CSS code snippet demonstrates a common issue: the use of !important to override styles, which can lead to unexpected behavior and maintenance difficulties.
+
+```css
+div {
+  color: blue;
+}
+
+div p {
+  color: red !important; 
+}
+```
+
+In this scenario, even if the parent div has a color specified, the child p element's color will be forced to red due to !important.  This can make it hard to trace the source of style conflicts and can hinder maintainability and scalability of the CSS.
