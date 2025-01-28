@@ -1,0 +1,13 @@
+The solution involves avoiding !important and using a more specific selector.  Instead of forcing the color with !important, we make the style more specific to the desired element. 
+
+```css
+div {
+  color: blue;
+}
+
+div > p {
+  color: red;
+}
+```
+
+Here, the `div > p` selector ensures that only the direct child paragraph within the div inherits the red color, without the need for !important.  This approach is clearer, easier to maintain, and respects the cascade of styles.
